@@ -356,43 +356,43 @@ function SignupScreen({ navigation, route }) {
             justifyContent: "center",
           }}
         >
-          {Platform.OS == "android" && (
-            <TouchableOpacity
-              onPress={() => loginWithGoogle()}
+          {/* {Platform.OS == "android" && ( */}
+          <TouchableOpacity
+            onPress={() => loginWithGoogle()}
+            style={{
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "row",
+              height: 52,
+              borderWidth: 1,
+              borderColor: COLORS.grey,
+              marginRight: 4,
+              borderRadius: 10,
+              backgroundColor: "white",
+            }}
+          >
+            <Image
+              source={require("../../src/images/google.webp")}
               style={{
-                flex: 1,
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "row",
-                height: 52,
-                borderWidth: 1,
-                borderColor: COLORS.grey,
-                marginRight: 4,
-                borderRadius: 10,
-                backgroundColor: "white",
+                height: 36,
+                width: 36,
+                marginRight: 8,
+              }}
+              resizeMode="contain"
+            />
+            <Text
+              style={{
+                fontSize: 16,
+                color: COLORS.black,
+                marginLeft: 16,
+                fontWeight: "400",
               }}
             >
-              <Image
-                source={require("../../src/images/google.webp")}
-                style={{
-                  height: 36,
-                  width: 36,
-                  marginRight: 8,
-                }}
-                resizeMode="contain"
-              />
-              <Text
-                style={{
-                  fontSize: 16,
-                  color: COLORS.black,
-                  marginLeft: 16,
-                  fontWeight: "400",
-                }}
-              >
-                Entra amb google
-              </Text>
-            </TouchableOpacity>
-          )}
+              Entra amb google
+            </Text>
+          </TouchableOpacity>
+          {/* )} */}
 
           {/* 
           <TouchableOpacity
